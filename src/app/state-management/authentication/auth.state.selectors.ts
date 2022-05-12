@@ -6,8 +6,8 @@ import { AuthState } from './auth.state'
 
 export abstract class AuthStateSelectors{
     @Selector([AuthState])
-    static USER_SIGNED_OUT({userSignedOut}: AuthStateModel){
-        return userSignedOut;
+    static USER_SIGNED_OUT({userSignedIn}: AuthStateModel){
+        return userSignedIn;
     }
     @Selector([AuthState])
     static USER_INFORMATION({token}: AuthStateModel){
@@ -20,5 +20,9 @@ export abstract class AuthStateSelectors{
     @Selector([AuthState])
     static IS_LOADING({isLoading}: AuthStateModel){
         return isLoading;
+    }
+    @Selector([AuthState])
+    static USER({user}: AuthStateModel){
+        return user;
     }
 }

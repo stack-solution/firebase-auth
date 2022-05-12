@@ -5,13 +5,19 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyCGJfA8b96Ck9mLMyPKgm13eazb_yVtvgU",
-    authDomain: "authentication-1871f.firebaseapp.com",
-    projectId: "authentication-1871f",
-    storageBucket: "authentication-1871f.appspot.com",
-    messagingSenderId: "3956594386",
-    appId: "1:3956594386:web:cf79e4e12003e56f30ff0b",
-    measurementId: "G-FXCVTWC5D6"
+    apiKey: "AIzaSyCDcZ1Q7_CYNa23w6NGs_MdnDe_ei7ZyGk",
+  
+    authDomain: "fir-authentification-b2577.firebaseapp.com",
+  
+    projectId: "fir-authentification-b2577",
+  
+    storageBucket: "fir-authentification-b2577.appspot.com",
+  
+    messagingSenderId: "500936608652",
+  
+    appId: "1:500936608652:web:b588421f37211b7f7ee4a9",
+  
+    measurementId: "G-D8E1PKG6FP"
   },
   baseUrl: "http://localhost:4200"
 };

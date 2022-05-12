@@ -9,12 +9,19 @@ import { FirebaseAuthenticationDataSource } from "../data-sources/firebase.authe
     providedIn: 'root'
   })
 export class AuthenticationRepository extends AbstractAuthenticationRepository{
-    constructor(private readonly dataSource: FirebaseAuthenticationDataSource){super();}
+    constructor(private readonly dataSource: AbstractAuthenticationDataSource){super();}
     async signIn(): Promise<ResponseEntity<UserEntity> | Error>{
         try{
             return await this.dataSource.signIn();
         } catch(error){
-            return new Error("Sign in didn't work out");
+            return new Error("Sign in didn't work out " + error);
+        }
+    }
+    async signOut(): Promise<ResponseEntity<void> | Error>{
+        try{
+            return await this.dataSource.signOut();
+        } catch(error){
+            return new Error("Sign Out didnt work " + error);
         }
     }
 }

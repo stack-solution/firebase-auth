@@ -7,4 +7,5 @@ import { UserEntity } from "src/app/entities/user.entity";
   })
 export abstract class AbstractAuthenticationRepository{
     abstract signIn():  Promise<ResponseEntity<UserEntity> | Error>;
+    abstract signOut():  Promise<ResponseEntity<void> | Error>;
 }

@@ -1,4 +1,4 @@
-import { SignInAction } from './state-management/authentication/auth.state.actions';
+import { SignInAction, SignOutAction } from './state-management/authentication/auth.state.actions';
 import { AuthState } from './state-management/authentication/auth.state';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -17,5 +17,8 @@ export class AppComponent {
   title = 'firebase-google-auth';
   signIn(){
     this.store.dispatch(new SignInAction);
+  }
+  signOut(){
+    this.store.dispatch(new SignOutAction);
   }
 }

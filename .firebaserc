@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "authentication-1871f"
-  }
+    "default": "fir-authentification-b2577",
+    "fireAuth": "fir-authentification-b2577"
+  },
+  "targets": {}
 }

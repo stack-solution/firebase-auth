@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/firebase-google-auth",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",

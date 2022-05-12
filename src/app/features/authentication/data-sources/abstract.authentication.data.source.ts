@@ -7,5 +7,5 @@ import { ResponseEntity } from "src/app/entities/response.entities";
 })
 export abstract class AbstractAuthenticationDataSource{
     abstract signIn():  Promise<ResponseEntity<UserEntity>>;
-
+    abstract signOut():  Promise<ResponseEntity<void>>;
 }

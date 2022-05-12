@@ -2,6 +2,6 @@ export class SignInAction {
     static readonly type = '[AUTH] SIGN IN'
 }
 
-export class SignOut {
+export class SignOutAction {
     static readonly type = '[AUTH] SIGN OUT'
 }
