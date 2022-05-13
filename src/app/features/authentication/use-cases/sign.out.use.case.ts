@@ -3,9 +3,7 @@ import { AbstractAuthenticationRepository } from "../repositories/abstract.authe
 import { AuthenticationRepository } from "../repositories/authentication.repository";
 
 
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable()
 export class SignOutUseCase{
     constructor(private readonly repository: AbstractAuthenticationRepository){}
     async execute(){

@@ -5,9 +5,7 @@ import { Injectable } from "@angular/core";
 import { ResponseEntity } from "src/app/entities/response.entities";
 import { FirebaseAuthenticationDataSource } from "../data-sources/firebase.authentitaction.data.source";
 
-@Injectable({
-    providedIn: 'root'
-  })
+@Injectable()
 export class AuthenticationRepository extends AbstractAuthenticationRepository{
     constructor(private readonly dataSource: AbstractAuthenticationDataSource){super();}
     async signIn(): Promise<ResponseEntity<UserEntity> | Error>{

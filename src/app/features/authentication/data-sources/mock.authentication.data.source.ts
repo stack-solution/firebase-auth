@@ -3,9 +3,7 @@ import { AbstractAuthenticationDataSource } from './abstract.authentication.data
 import { UserEntity } from "src/app/entities/user.entity";
 import { ResponseEntity } from 'src/app/entities/response.entities';
 
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable()
 export class MockAuthenticationDataSource extends AbstractAuthenticationDataSource{
     async signIn(): Promise<ResponseEntity<UserEntity>>{
         console.log("Login Function triggered");

@@ -10,9 +10,8 @@ import {
     signOut,
   } from 'firebase/auth';
 
-@Injectable({
-    providedIn: 'root'
-})
+
+@Injectable()
 export class FirebaseAuthenticationDataSource extends AbstractAuthenticationDataSource{
   async signIn(): Promise<ResponseEntity<UserEntity>> {
     await signInWithPopup(getAuth(), new GoogleAuthProvider());
