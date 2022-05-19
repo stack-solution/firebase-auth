@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PomodoroComponent } from './pomodoro.component';
+import { PomodoroComponent } from './pomodoro.page';
 
 describe('PomodoroComponent', () => {
   let component: PomodoroComponent;

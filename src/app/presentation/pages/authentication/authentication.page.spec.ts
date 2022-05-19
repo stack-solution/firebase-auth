@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SecretRouteComponent } from './secret-route.component';
+import { AuthenticationPage } from './authentication.page';
 
-describe('SecretRouteComponent', () => {
-  let component: SecretRouteComponent;
-  let fixture: ComponentFixture<SecretRouteComponent>;
+describe('AuthenticationComponent', () => {
+  let component: AuthenticationPage;
+  let fixture: ComponentFixture<AuthenticationPage>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SecretRouteComponent ]
+      declarations: [ AuthenticationPage ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SecretRouteComponent);
+    fixture = TestBed.createComponent(AuthenticationPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
