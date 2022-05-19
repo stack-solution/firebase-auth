@@ -11,6 +11,8 @@ import { SecretRouteComponent } from './presentation/components/secret-route/sec
 import { NgxsModule } from '@ngxs/store';
 import { FireBaseModule } from './firebase/firebase.module';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
+import { AuthenticationComponent } from './presentation/pages/authentication/authentication.component';
+import { PomodoroComponent } from './presentation/pages/pomodoro/pomodoro.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
     HomePageComponent,
     AboutPageComponent,
     SecretRouteComponent,
+    AuthenticationComponent,
+    PomodoroComponent,
   ],
   imports: [
     BrowserModule,
