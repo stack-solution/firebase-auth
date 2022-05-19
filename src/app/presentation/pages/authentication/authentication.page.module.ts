@@ -3,16 +3,12 @@ import { AuthenticationModule } from './../../components/authentication/authenti
 import { NgModule } from '@angular/core';
 import { AuthenticationPage } from './authentication.page';
 import { AuthenticationComponent } from '../../components/authentication/authentication.component';
+import { HeaderModule } from '../../components/header/header.module';
 
 @NgModule({
     imports: [
         AuthenticationModule,
-        RouterModule.forChild([
-            {
-              path: '',
-              component: AuthenticationPage,
-            },
-          ]),
+        HeaderModule,
     ],
     exports: [AuthenticationPage],
     declarations: [AuthenticationPage],
