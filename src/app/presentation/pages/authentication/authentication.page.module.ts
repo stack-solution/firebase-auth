@@ -10,7 +10,7 @@ import { HeaderModule } from '../../components/header/header.module';
         AuthenticationModule,
         HeaderModule,
     ],
-    exports: [AuthenticationPage],
+    exports: [HeaderModule],
     declarations: [AuthenticationPage],
     providers: [],
 })

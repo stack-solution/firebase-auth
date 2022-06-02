@@ -9,6 +9,7 @@ import { NgxsModule } from '@ngxs/store';
 import { FireBaseModule } from './firebase/firebase.module';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { AuthenticationPageModule } from './presentation/pages/authentication/authentication.page.module';
+import { PomodoroPageModule } from './presentation/pages/pomodoro/pomodoro.page.module';
 
 
 
@@ -17,6 +18,8 @@ import { AuthenticationPageModule } from './presentation/pages/authentication/au
     AppComponent,
   ],
   imports: [
+    AuthenticationPageModule,
+    PomodoroPageModule,
     BrowserModule,
     AppRoutingModule,
     FireBaseModule,

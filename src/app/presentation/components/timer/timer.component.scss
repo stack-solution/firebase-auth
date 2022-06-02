@@ -1,0 +1,9 @@
+#divhight{min-height: calc(100vh - 8vh);}
+
+div > button{
+    font-size: 75px;
+    margin: 0 2rem;
+    background-color: lightgray;
+    padding: 1rem;
+    border-radius: 20px;
+}

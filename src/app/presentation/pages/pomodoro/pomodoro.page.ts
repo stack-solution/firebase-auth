@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './pomodoro.page.html',
   styleUrls: ['./pomodoro.page.scss']
 })
-export class PomodoroComponent implements OnInit {
+export class PomodoroPage implements OnInit {
 
   constructor() { }
 
