@@ -9,13 +9,29 @@ import { MinLengthValidator } from '@angular/forms';
 export class TimerComponent implements OnInit {
 
   constructor() { }
-  pomodoro: number = 25;
-  seconds?: number;
-  shortBreak: number = 5;
-  longBreak: number = 15;
+  startTime: number = 25;
+  time = this.startTime * 60;
+  minutes?: number;
+  seconds?: any = "00";
+  started: boolean = true;
+  interval?: any;
 
-  updateCountdown(){
-    
+  startCountdown(){
+    setInterval(()=>{
+      this.minutes = Math.floor(this.time/60);
+      this.seconds = this.time % 60;
+
+      this.seconds = this.seconds < 10 ? '0' + this.seconds : this.seconds;
+      this.time--;
+    }, 1000)
+  }
+
+  toggleTimer(){
+    this.started != this.started;
+  }
+
+  stopCountdown(){
+    clearInterval()
   }
 
   ngOnInit(): void {
