@@ -3,16 +3,20 @@ import { AbstractAuthenticationDataSource } from './abstract.authentication.data
 import { UserEntity } from "src/app/entities/user.entity";
 import { ResponseEntity } from 'src/app/entities/response.entities';
 import {
+  browserLocalPersistence,
     getAuth,
     getIdToken,
     GoogleAuthProvider,
     signInWithPopup,
     signOut,
   } from 'firebase/auth';
+  import { Router } from '@angular/router';
 
 
 @Injectable()
 export class FirebaseAuthenticationDataSource extends AbstractAuthenticationDataSource{
+  constructor(private router: Router){super();}
+
   async signIn(): Promise<ResponseEntity<UserEntity>> {
     await signInWithPopup(getAuth(), new GoogleAuthProvider());
     const ret = getAuth().currentUser;

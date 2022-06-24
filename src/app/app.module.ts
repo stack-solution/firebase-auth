@@ -10,6 +10,7 @@ import { FireBaseModule } from './firebase/firebase.module';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { AuthenticationPageModule } from './presentation/pages/authentication/authentication.page.module';
 import { PomodoroPageModule } from './presentation/pages/pomodoro/pomodoro.page.module';
+import { HomePageModule } from './presentation/pages/home-page/home.page.module';
 
 
 
@@ -20,6 +21,7 @@ import { PomodoroPageModule } from './presentation/pages/pomodoro/pomodoro.page.
   imports: [
     AuthenticationPageModule,
     PomodoroPageModule,
+    HomePageModule,
     BrowserModule,
     AppRoutingModule,
     FireBaseModule,

@@ -1,9 +1,6 @@
 import { SignInAction, SignOutAction } from './state-management/authentication/auth.state.actions';
-import { AuthState } from './state-management/authentication/auth.state';
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import {Select, Store} from "@ngxs/store";
-import { AuthStateSelectors } from './state-management/authentication/auth.state.selectors';
+import {Store} from "@ngxs/store";
 
 
 @Component({

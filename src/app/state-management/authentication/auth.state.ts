@@ -8,6 +8,7 @@ import { SignOutUseCase } from 'src/app/features/authentication/use-cases/sign.o
 @State<AuthStateModel>({
     name: 'auth',
 })
+
 @Injectable()
 export class AuthState {
     constructor(
@@ -27,7 +28,7 @@ export class AuthState {
                 error: ret,
                 userSignedIn: false,
             })
-        }else{
+        }else {
             patchState({
                 isLoading: false,
                 user: ret.data,

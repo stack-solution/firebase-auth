@@ -3,11 +3,13 @@
             <span>Pomodoro</span>
         </div>
         <div>
-            <li>
-                <a>Home</a>
-                <a>Pomodoro</a>
-                <a>Stats</a>
-                <a></a>
+            <li class="flex items-center justify-around text-center">
+            <div>
+                <a [routerLink]="['/home']">Home</a>
+                <a [routerLink]="['/pomodoro']">Pomodoro</a>
+                <a [routerLink]="['/stats']">Stats</a>
+                <span *ngIf="signedOut$ | async" (click)="signOut()" class="cursor-pointer">X</span>
+            </div>
             </li>
         </div>
 </nav>

@@ -7,9 +7,12 @@ import { AbstractAuthenticationDataSource } from './data-sources/abstract.authen
 import { AbstractAuthenticationRepository } from './repositories/abstract.authentication.data.repository';
 import { FirebaseAuthenticationDataSource } from './data-sources/firebase.authentitaction.data.source';
 import { environment } from 'src/environments/environment';
+import { Router } from '@angular/router';
 
 
 @NgModule({
+    imports: [
+    ],
     providers: [
         SignInUseCase,
         SignOutUseCase,
@@ -28,11 +31,11 @@ import { environment } from 'src/environments/environment';
         },
         {
             provide: AbstractAuthenticationDataSource,
-            useFactory: () => {
+            useFactory: (router: Router) => {
               if (environment.firebase) {
-                return new FirebaseAuthenticationDataSource();
+                return new FirebaseAuthenticationDataSource(router);
               }
-              return new FirebaseAuthenticationDataSource();
+              return new FirebaseAuthenticationDataSource(router);
             },
         },
     ],

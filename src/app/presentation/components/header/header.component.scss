@@ -10,7 +10,9 @@ nav{
 
     div{
         margin: 0 10px;
-
+        display: flex;
+        align-items: center;
+        
         span{
             font-size: 27px;            
         }
