@@ -1,3 +1,8 @@
 export interface TimeStateModel{
-    start?: number;
+    loading?: boolean;
+    startTime?: number;
+    minutes?: number;
+    time?: number;
+    seconds?: string;
+    started?: boolean;
 }

@@ -11,6 +11,8 @@ import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { AuthenticationPageModule } from './presentation/pages/authentication/authentication.page.module';
 import { PomodoroPageModule } from './presentation/pages/pomodoro/pomodoro.page.module';
 import { HomePageModule } from './presentation/pages/home-page/home.page.module';
+import { TimeState } from './state-management/pomodoro/pomodoro.state';
+import { PomodoroFeatureModule } from './features/pomodoro/pomodoro.features.module';
 
 
 
@@ -20,6 +22,7 @@ import { HomePageModule } from './presentation/pages/home-page/home.page.module'
   ],
   imports: [
     AuthenticationPageModule,
+    PomodoroFeatureModule,
     PomodoroPageModule,
     HomePageModule,
     BrowserModule,
@@ -27,7 +30,7 @@ import { HomePageModule } from './presentation/pages/home-page/home.page.module'
     FireBaseModule,
     FormsModule,
     AuthenticationPageModule,
-    NgxsModule.forRoot([AuthState]),
+    NgxsModule.forRoot([AuthState, TimeState]),
     NgxsReduxDevtoolsPluginModule.forRoot(),
     AuthenticationFeatureModule,
   ],

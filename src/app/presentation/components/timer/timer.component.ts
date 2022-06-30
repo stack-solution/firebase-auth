@@ -1,5 +1,9 @@
+import { Observable } from 'rxjs';
+import { TimerStartAction, TimerStopAction } from './../../../state-management/pomodoro/pomodoro.actions';
 import { Component, OnInit } from '@angular/core';
 import { MinLengthValidator } from '@angular/forms';
+import { Select, Store } from '@ngxs/store';
+import { PomodoroStateSelectors } from 'src/app/state-management/pomodoro/pomodoro.selectors';
 
 @Component({
   selector: 'app-timer',
@@ -8,30 +12,31 @@ import { MinLengthValidator } from '@angular/forms';
 })
 export class TimerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private store: Store) { }
   startTime: number = 25;
   time = this.startTime * 60;
   minutes?: number;
   seconds?: any = "00";
   started: boolean = true;
-  interval?: any;
 
-  startCountdown(){
+
+  @Select(PomodoroStateSelectors.GET_TIMER_STATE) hasStarted$?: Observable<boolean>;
+
+  startCountdown1(){
     setInterval(()=>{
       this.minutes = Math.floor(this.time/60);
       this.seconds = this.time % 60;
-
       this.seconds = this.seconds < 10 ? '0' + this.seconds : this.seconds;
       this.time--;
     }, 1000)
   }
 
-  toggleTimer(){
-    this.started != this.started;
+  startCountdown(){
+    this.store.dispatch(new TimerStartAction(this.startTime))
   }
 
   stopCountdown(){
-    clearInterval()
+    this.store.dispatch(new TimerStopAction())
   }
 
   ngOnInit(): void {

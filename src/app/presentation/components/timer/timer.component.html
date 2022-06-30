@@ -1,10 +1,10 @@
 <div class="">
     <div class="">
-        <div *ngIf="started">
+        <div *ngIf="hasStarted$ | async">
             {{minutes}}:{{seconds}}
         </div>
         <div>
-            <button (click)="startCountdown(); toggleTimer()">Start</button>
+            <button (click)="startCountdown()">Start</button>
             <button (click)="stopCountdown()">Stop</button>
             <button>Reset</button>
         </div>
